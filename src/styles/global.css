@@ -255,6 +255,12 @@ section { position: relative; }
 .card .handle { font-family: var(--font-mono); font-weight: 700; font-size: 1.35rem; margin-top: 16px; letter-spacing: -0.01em; }
 .card .role { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-soft); margin-top: 4px; }
 .card .bio { font-size: 0.92rem; margin-top: 12px; color: var(--ink); }
+.card .badge--red { background: var(--red); color: var(--paper); }
+.card .badge--ink { background: var(--ink); color: var(--paper); }
+.card .links { display: flex; flex-wrap: wrap; gap: 8px 14px; margin-top: 14px; font-family: var(--font-mono); font-size: 0.72rem; }
+.card .links a { color: var(--blue); text-decoration: underline; text-underline-offset: 2px; text-decoration-thickness: 1.5px; }
+.card .links a:hover { color: var(--red); }
+.card .links .mono-tag { color: var(--ink-soft); letter-spacing: 0.04em; }
 .card--join { background: transparent; border-style: dashed; box-shadow: none; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 14px; }
 .card--join .q { font-family: var(--font-display); text-transform: uppercase; font-size: 1.7rem; line-height: 0.9; }
 .card--you .badge { background: var(--paper); color: var(--ink); border-style: dashed; }
