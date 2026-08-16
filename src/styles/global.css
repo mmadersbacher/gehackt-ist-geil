@@ -11,9 +11,10 @@
   --paper:      #ece3ce;   /* warmes Zeitungspapier */
   --paper-2:    #e3d9c0;   /* Panel, etwas dunkler */
   --ink:        #17140e;   /* warmes Fast-Schwarz */
-  --ink-soft:   #554e3b;   /* gedämpfte Zweitschrift */
-  --blue:       #1f2ae6;   /* Riso-Kobalt — Hauptton */
+  --ink-soft:   #4a4331;   /* gedämpfte Zweitschrift (kontraststärker) */
+  --blue:       #1f2ae6;   /* Riso-Kobalt — auf hellem Grund */
   --blue-deep:  #141c9c;
+  --blue-bright:#6a78ff;   /* helleres Blau — lesbar auf dunklem Grund */
   --red:        #ff3a1d;   /* Riso-Zinnober — Akzent */
   --hair:       rgba(23, 20, 14, 0.20);
   --hair-2:     rgba(23, 20, 14, 0.10);
@@ -202,16 +203,16 @@ section { position: relative; }
 /* ---- Manifest (inverted printed block) ---- */
 .manifest { background: var(--ink); color: var(--paper); }
 .manifest .sec-head { border-color: rgba(236,227,206,0.35); }
-.manifest .sec-head .no { color: rgba(236,227,206,0.6); }
+.manifest .sec-head .no { color: rgba(236,227,206,0.74); }
 .manifest ::selection { background: var(--red); color: var(--paper); }
 .manifest .big {
   font-family: var(--font-display); text-transform: uppercase;
   font-size: var(--t-h2); line-height: 0.9; max-width: 16ch;
 }
-.manifest .big .hl { color: var(--blue); }
+.manifest .big .hl { color: var(--blue-bright); }
 .manifest .big .hl-r { color: var(--red); }
 .manifest .cols { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(20px, 4vw, 48px); margin-top: 34px; }
-.manifest .cols p { color: rgba(236,227,206,0.86); max-width: 52ch; }
+.manifest .cols p { color: rgba(239,233,219,0.94); max-width: 54ch; font-size: 1.07rem; line-height: 1.65; }
 .manifest .cols p b { color: var(--paper); }
 @media (max-width: 720px) { .manifest .cols { grid-template-columns: 1fr; } }
 
@@ -227,7 +228,7 @@ section { position: relative; }
 .row .ev .name { font-weight: 600; font-size: var(--t-h3); font-family: var(--font-body); line-height: 1.05; }
 .row .ev .meta { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.08em; color: var(--ink-soft); text-transform: uppercase; }
 .row .num { font-family: var(--font-mono); font-variant-numeric: tabular-nums; text-align: right; }
-.row .num .k { display: block; font-size: 0.62rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-soft); }
+.row .num .k { display: block; font-size: 0.66rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-soft); }
 .row .num .v { font-size: 1.15rem; font-weight: 600; }
 .row .sweep { position: absolute; inset: 0; background: var(--blue); z-index: -1; transform: scaleX(0); transform-origin: left; transition: transform 0.28s cubic-bezier(0.2,0.7,0.2,1); }
 .row:hover { color: var(--paper); }
@@ -278,9 +279,9 @@ section { position: relative; }
 .foot { background: var(--ink); color: var(--paper); padding-block: 40px 30px; }
 .foot .wrap { display: flex; flex-wrap: wrap; gap: 20px 40px; justify-content: space-between; align-items: flex-end; }
 .foot .fbrand { font-family: var(--font-display); text-transform: uppercase; font-size: clamp(2rem, 6vw, 3.4rem); line-height: 0.85; }
-.foot .fbrand .b { color: var(--blue); }
+.foot .fbrand .b { color: var(--blue-bright); }
 .foot .fbrand .r { color: var(--red); }
-.foot .meta { font-family: var(--font-mono); font-size: 0.74rem; letter-spacing: 0.08em; color: rgba(236,227,206,0.62); line-height: 1.9; text-align: right; }
+.foot .meta { font-family: var(--font-mono); font-size: 0.76rem; letter-spacing: 0.06em; color: rgba(236,227,206,0.78); line-height: 1.95; text-align: right; }
 .foot a { color: var(--paper); text-underline-offset: 3px; }
 
 /* ---- Reveal — ohne JS ist alles sichtbar; .anim versteckt, .in zeigt ---- */
