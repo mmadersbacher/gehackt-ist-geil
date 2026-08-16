@@ -9,7 +9,10 @@ import "@fontsource/ibm-plex-mono/700.css";
 import "../styles/global.css";
 
 const CTFTIME = "https://ctftime.org/team/438200";
-const IMG = `${import.meta.env.BASE_URL.replace(/\/?$/, "/")}bubensahne.png`;
+const B = import.meta.env.BASE_URL.replace(/\/?$/, "/");
+const IMG = `${B}bubensahne.png`;
+const AV_TELQRRRR = `${B}av-telqrrrr.jpg`;
+const AV_LUNARIC = `${B}av-lunaric.jpg`;
 
 const results = [
   { place: "2",   event: "MntcrlCTF 2026",     kind: "Jeopardy", pts: "13.764", rating: "36,639", podium: "Podium" },
@@ -183,9 +186,9 @@ const favicon =
           <div class="crew-grid">
             <article class="card reveal">
               <span class="idx mono">01</span>
-              <div class="badge">T</div>
+              <div class="badge"><img class="av" src={AV_TELQRRRR} width="62" height="62" alt="Telqrrrr" /></div>
               <div class="handle">Telqrrrr</div>
-              <div class="role">Founder · Player</div>
+              <div class="role">Player</div>
               <p class="bio">
                 Netzwerke, Reversing und die Überzeugung, dass man Dinge zerlegen muss, um sie zu
                 verstehen. Baut Tools, wenn ihm eins fehlt.
@@ -194,9 +197,9 @@ const favicon =
 
             <article class="card reveal">
               <span class="idx mono">02</span>
-              <div class="badge badge--red">L</div>
+              <div class="badge badge--red"><img class="av" src={AV_LUNARIC} width="62" height="62" alt="Lunaric" /></div>
               <div class="handle">Lunaric</div>
-              <div class="role">Player · seit Juni 2026</div>
+              <div class="role">Player</div>
               <p class="bio">„Good at: nothing" — sagt er selbst. Am Scoreboard liest sich das anders.</p>
               <div class="links">
                 <a href="https://ctftime.org/user/262753" target="_blank" rel="noopener">CTFtime ↗</a>
@@ -208,7 +211,7 @@ const favicon =
               <span class="idx mono">03</span>
               <div class="badge badge--ink">Y</div>
               <div class="handle">Yousuf</div>
-              <div class="role">Player · seit Juni 2026</div>
+              <div class="role">Player</div>
               <p class="bio">Jagt Flags mit dem Team, seit es das Team gibt.</p>
               <div class="links">
                 <span class="mono-tag">CTFtime: yousufyesil</span>

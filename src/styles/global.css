@@ -251,7 +251,8 @@ section { position: relative; }
   box-shadow: 6px 6px 0 var(--ink); padding: 20px; position: relative; overflow: hidden;
 }
 .card .idx { position: absolute; top: 10px; right: 14px; font-family: var(--font-mono); font-size: 0.7rem; color: var(--ink-soft); }
-.card .badge { width: 62px; height: 62px; border-radius: 50%; background: var(--blue); color: var(--paper); display: grid; place-items: center; font-family: var(--font-display); font-size: 1.7rem; border: 2px solid var(--ink); }
+.card .badge { width: 62px; height: 62px; border-radius: 50%; background: var(--blue); color: var(--paper); display: grid; place-items: center; font-family: var(--font-display); font-size: 1.7rem; border: 2px solid var(--ink); overflow: hidden; isolation: isolate; }
+.card .badge .av { grid-area: 1 / 1; width: 100%; height: 100%; object-fit: cover; filter: contrast(1.06); mix-blend-mode: luminosity; }
 .card .handle { font-family: var(--font-mono); font-weight: 700; font-size: 1.35rem; margin-top: 16px; letter-spacing: -0.01em; }
 .card .role { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-soft); margin-top: 4px; }
 .card .bio { font-size: 0.92rem; margin-top: 12px; color: var(--ink); }
