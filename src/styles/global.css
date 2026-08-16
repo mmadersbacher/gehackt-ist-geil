@@ -270,9 +270,9 @@ section { position: relative; }
 .card--you .badge { background: var(--paper); color: var(--ink); border-style: dashed; }
 
 /* ---- Join / CTA band ---- */
-.band { background: var(--blue); color: var(--paper); border-block: 2px solid var(--ink); }
+.band { background: var(--blue-deep); color: var(--paper); border-block: 2px solid var(--ink); }
 .band .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px; padding-block: clamp(40px, 6vw, 72px); }
-.band h2 { font-family: var(--font-display); text-transform: uppercase; font-size: var(--t-h2); line-height: 0.86; max-width: 14ch; }
+.band h2 { font-family: var(--font-display); text-transform: uppercase; font-size: var(--t-h2); line-height: 0.96; max-width: 18ch; letter-spacing: 0.01em; }
 .band ::selection { background: var(--red); color: var(--paper); }
 
 /* ---- Footer ---- */
