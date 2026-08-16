@@ -287,12 +287,11 @@ const favicon =
 
         const OUT_W = 760;
         let OUT_H = 620;
-        const GAP = 7;
+        const GAP = 8;
         const INK = "#17140e";
         const BLUE = "#1f2ae6";
         const PAPER = "#ece3ce";
         let cells: { x: number; y: number; lum: number }[] = [];
-        const pointer = { x: -1, y: -1 };
 
         const img = new Image();
         img.decoding = "async";
@@ -332,14 +331,7 @@ const favicon =
                 const local = c.x / OUT_W;
                 p = Math.max(0, Math.min(1, progress * 1.5 - local * 0.5));
               }
-              let r = (1 - c.lum) * maxR * p;
-              if (pointer.x >= 0) {
-                const dx = c.x - pointer.x;
-                const dy = c.y - pointer.y;
-                const d2 = dx * dx + dy * dy;
-                const R = 92;
-                if (d2 < R * R) r += (1 - Math.sqrt(d2) / R) * maxR * 0.55;
-              }
+              const r = (1 - c.lum) * maxR * p;
               if (r > 0.15) {
                 ctx.moveTo(c.x + ox + r, c.y + oy);
                 ctx.arc(c.x + ox, c.y + oy, r, 0, 6.2832);
@@ -366,24 +358,6 @@ const favicon =
             if (t < 1) requestAnimationFrame(tick);
           };
           requestAnimationFrame(tick);
-
-          let ticking = false;
-          canvas.addEventListener("pointermove", (e) => {
-            const rect = canvas.getBoundingClientRect();
-            pointer.x = (e.clientX - rect.left) * (OUT_W / rect.width);
-            pointer.y = (e.clientY - rect.top) * (OUT_H / rect.height);
-            if (!ticking) {
-              ticking = true;
-              requestAnimationFrame(() => {
-                draw(1);
-                ticking = false;
-              });
-            }
-          });
-          canvas.addEventListener("pointerleave", () => {
-            pointer.x = -1;
-            draw(1);
-          });
         };
         img.onerror = () => {
           canvas.width = OUT_W;
