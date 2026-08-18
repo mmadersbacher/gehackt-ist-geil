@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gehackt ist Geil — umgezogen</title>
+    <link rel="canonical" href="https://mmadersbacher.github.io/" />
+    <meta http-equiv="refresh" content="0; url=https://mmadersbacher.github.io/" />
+    <meta name="robots" content="noindex, follow" />
+    <meta name="theme-color" content="#ece3ce" />
+    <style>
+      :root { --paper: #ece3ce; --ink: #17140e; --blue: #1f2ae6; --red: #ff3a1d; }
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      body {
+        min-height: 100vh; display: grid; place-items: center; padding: 24px;
+        background: var(--paper); color: var(--ink);
+        font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+        background-image: radial-gradient(rgba(23, 20, 14, 0.1) 0.7px, transparent 0.8px);
+        background-size: 5px 5px;
+      }
+      main { max-width: 46ch; text-align: center; }
+      h1 {
+        font-family: "Arial Black", "Arial Narrow", Impact, sans-serif; text-transform: uppercase;
+        font-size: clamp(2.2rem, 9vw, 4rem); line-height: 0.9; letter-spacing: -0.01em;
+      }
+      h1 .geil { color: var(--blue); }
+      p { margin-top: 18px; font-size: 0.92rem; line-height: 1.7; }
+      a.btn {
+        display: inline-flex; gap: 10px; margin-top: 24px; padding: 12px 18px;
+        border: 2px solid var(--ink); background: var(--blue); color: var(--paper);
+        text-decoration: none; font-weight: 600; font-size: 0.8rem;
+        letter-spacing: 0.1em; text-transform: uppercase; box-shadow: 4px 4px 0 var(--ink);
+      }
+      a.btn:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--ink); }
+      small { display: block; margin-top: 22px; color: var(--red); letter-spacing: 0.14em; text-transform: uppercase; font-size: 0.66rem; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Gehackt ist <span class="geil">Geil</span></h1>
+      <p>Die Seite ist umgezogen und wohnt jetzt direkt unter mmadersbacher.github.io.</p>
+      <a class="btn" href="https://mmadersbacher.github.io/">Zur Seite →</a>
+      <small>Weiterleitung läuft</small>
+    </main>
+  </body>
+</html>
